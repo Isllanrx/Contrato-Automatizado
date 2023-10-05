@@ -1,21 +1,27 @@
+# CRIADO POR ISLLAN TOSO PEREIRA #########|
+#PROJETO DE AUTOMATIZACAO DE CONTRATO ####|
+##########################################|
+
 import tkinter as tk
 import textwrap
 from tkinter import messagebox
 from reportlab.pdfgen import canvas
 from PyPDF2 import PdfFileReader, PdfFileWriter
 
+# CRIACAO DA INTERFACE:
 class ContratoCarro:
     def __init__(self, root):
         self.root = root
         self.root.title("Contrato Paulo Veiculos")
 
         self.create_widgets()
-
+        # TAMANHO DA INTERFACE COM TITULO:
     def create_widgets(self):
         
         self.label_frame = tk.LabelFrame(self.root, text="Dados Cadastrais")
         self.label_frame.pack(padx=40, pady=20)
 
+        #TODOS OS CAMPOS COM OS DEVIDOS NOMES:
         fields = ["Nome", "CPF","RG", "Telefone", "N°", "Rua", "Bairro", "Cidade", "Veiculo/ano", "Placa do Carro", "Renavam do Carro","Condicao", "Valor Final","Km Atual", "Dia de Venda"]
         
         self.entries = {field: tk.Entry(self.label_frame) for field in fields}
@@ -26,12 +32,12 @@ class ContratoCarro:
 
         self.generate_button = tk.Button(self.root, text="Gerar Contrato em PDF", command=self.generate_pdf)
         self.generate_button.pack(pady= 20)
-
+       
+    # FUNCAO PARA GERAR O PDF:
     def generate_pdf(self):
         # Obtém os valores dos campos
         data = {field: self.entries[field].get() for field in self.entries}
 
-       
         # Cria um PDF com as informações
         pdf_filename = "Contrato_Carro.pdf"
         pdf_canvas = canvas.Canvas(pdf_filename)
