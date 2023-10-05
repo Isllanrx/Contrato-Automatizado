@@ -24,3 +24,5 @@ Este é um projeto em Python que visa automatizar a criação de contratos em fo
    ```bash
    pip install tkinter reportlab pypdf2 textwrap
 3. Certifique-se de ter o python instalado no pc.
+4.  Execute o python main.py
+
