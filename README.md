@@ -26,3 +26,11 @@ Este é um projeto em Python que visa automatizar a criação de contratos em fo
 3. Certifique-se de ter o python instalado no pc.
 4.  Execute o python main.py
 
+## Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas (issues) ou enviar pull requests com melhorias.
+
+## Licença
+
+Este projeto é distribuído sob a licença [MIT](LICENSE). Sinta-se à vontade para usar, modificar e distribuir conforme os termos da licença.
+
